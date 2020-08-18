@@ -18,6 +18,17 @@ app.get('/',(req,res)=>{
     })
 })
 
+app.get('/users/:id',function(req,res){
+    console.log(req.params.id)
+    const id = req.params.id?req.params.id:undefined
+    
+	res.json({
+		success: true,
+		message: 'got one user',
+		user: id
+	})
+})
+
 
 
 
